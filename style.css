@@ -1,0 +1,152 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: #696e9e;
+    font-family: "Montserrat";
+    color: white;
+}
+#main{
+    display: flex;
+    border: 5px #ffa500 solid;
+}
+h1{
+    text-align: center;
+    background-color: #ffa500;
+    height: 200px;
+    font-size: 60px;
+    margin: 15px 15px 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.galery {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    grid-auto-rows: 200px;
+    margin-left: 100px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+} 
+.box {
+    background: white;
+    transform: rotateX(30deg) rotateZ(-15deg);
+    transform-style: preserve-3d;
+    transition: .3s;
+    position: relative;
+}
+.box::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    background-color: #d0d0d0;
+    width: 100%;
+    height: 16px;
+    transform: rotateX(90deg) translateY(-8px);
+  }
+.box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -8px;
+    width: 16px;
+    height: 100%;
+    background-color: #bbb;
+    transform: rotateY(90deg) translateX(8px);
+  }
+.box > img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+}
+.box > img:hover{
+    filter: grayscale(0);
+}
+.box:hover{
+    box-shadow: 0 0 10px 1px red;
+    transform: rotate(0);
+}
+.newOne{
+    width: 50%;
+    float:left;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h2{
+    font-size: 60px;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+.newImg{
+    width: 400px;
+    height: 700px;
+    box-shadow: 0px 0px 45px 13px #EF7B7D;
+    animation: newOneImgShadow 10s infinite;
+}
+.arrow{
+    transform: translateX(-140px);
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    animation: arrowAnimation 3s infinite;
+}
+.newText{
+    transform: translateY(-50px) translateX(-100px);
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    animation: newTextAnimation 3s infinite;
+}
+.changeColor{
+    width: 60px;
+    height: 40px;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+@keyframes arrowAnimation{
+    50%{transform: translateX(-140px) rotate(-40deg);}
+}
+@keyframes newTextAnimation{
+    50%{transform: translateY(-30px) translateX(-110px)};
+}
+@keyframes newOneImgShadow{
+    0% {box-shadow: 0px 0px 55px 13px #FFAF4A;}
+    10% {box-shadow: 0px 0px 55px 13px #F7FF4A;}
+    20% {box-shadow: 0px 0px 55px 13px #BAFF4A;}
+    30% {box-shadow: 0px 0px 55px 13px #4AFF4C;}
+    40% {box-shadow: 0px 0px 55px 13px #4AFFAB;}
+    50% {box-shadow: 0px 0px 55px 13px #4AD3FF;}
+    60% {box-shadow: 0px 0px 55px 13px #4A82FF;}
+    70% {box-shadow: 0px 0px 55px 13px #634AFF;}
+    80% {box-shadow: 0px 0px 55px 13px #F04AFF;}
+    90% {box-shadow: 0px 0px 55px 13px #FF4A5E;}
+    100% {box-shadow: 0px 0px 55px 13px #FFAF4A;}
+}
+@media (max-width: 1252px){
+
+}
+@media (max-width: 1147.78px){
+#main{
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    align-items: center;
+}
+.galery{
+    width: 70%;
+    margin: 0 0 0 0;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.newOne{
+    width: 100%;
+}
+}
