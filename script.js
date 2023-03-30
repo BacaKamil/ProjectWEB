@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   
 
-function Efect3D() {
+function Effect3D() {
     const boxes = document.querySelectorAll('.box');
     boxes.forEach(box => {
         const computedStyle = window.getComputedStyle(box);

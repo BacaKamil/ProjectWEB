@@ -101,7 +101,7 @@ h2{
     width: 100px;
     animation: newTextAnimation 3s infinite;
 }
-.changeColor{
+.changeEffectButton{
     width: 60px;
     height: 40px;
     position: fixed;
