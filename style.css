@@ -107,6 +107,7 @@ h2{
     position: fixed;
     right: 0;
     top: 0;
+    z-index: 10;
 }
 @keyframes arrowAnimation{
     50%{transform: translateX(-140px) rotate(-40deg);}
