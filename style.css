@@ -127,9 +127,6 @@ h2{
     90% {box-shadow: 0px 0px 55px 13px #FF4A5E;}
     100% {box-shadow: 0px 0px 55px 13px #FFAF4A;}
 }
-@media (max-width: 1252px){
-
-}
 @media (max-width: 1147.78px){
 #main{
     flex-direction: column;
@@ -149,4 +146,9 @@ h2{
 .newOne{
     width: 100%;
 }
+}
+@media (max-width: 470px){
+    .newOne{
+        width: 40%;
+    }
 }
