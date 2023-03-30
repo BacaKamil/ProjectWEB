@@ -4,8 +4,7 @@
 }
 body {
     background-color: #696e9e;
-    font-family: "Montserrat";
-    color: white;
+    color: #ffffff;
 }
 #main{
     display: flex;
@@ -32,7 +31,7 @@ h1{
     margin-bottom: 20px;
 } 
 .box {
-    background: white;
+    background: #ffffff;
     transform: rotateX(30deg) rotateZ(-15deg);
     transform-style: preserve-3d;
     transition: .3s;
@@ -55,7 +54,7 @@ h1{
     left: -8px;
     width: 16px;
     height: 100%;
-    background-color: #bbb;
+    background-color: #bbbbbb;
     transform: rotateY(90deg) translateX(8px);
   }
 .box > img{
@@ -67,7 +66,7 @@ h1{
     filter: grayscale(0);
 }
 .box:hover{
-    box-shadow: 0 0 10px 1px red;
+    box-shadow: 0 0 10px 1px #ff0000;
     transform: rotate(0);
 }
 .newOne{
